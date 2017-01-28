@@ -1,0 +1,29 @@
+{
+  "name": "Master_English",
+  "version": "1.0.0",
+  "description": "Master_English for fun",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "NODE_ENV=test nodemon --exec 'mocha -R spec'",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanleyyylau/masterenglish.git"
+  },
+  "author": "Stanley Lau <stanleyyylau@gmail.com> (https://github.com/stanleyyylau)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stanleyyylau/masterenglish.git/issues"
+  },
+  "homepage": "https://github.com/stanleyyylau/masterenglish.git#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.4"
+  }
+}

@@ -8,10 +8,11 @@ const config = require('./config/config')();
 const VocabAPIController = require('./controllers/VocabAPI')
 
 app.use(bodyParser.json());
+app.use(express.static('public'))
 
 // Add your routers here
 app.get('/', function (req, res) {
-  res.send('Welcome to this home page')
+  res.send('index.html')
 })
 
 app.get('/all', VocabAPIController.getAll);

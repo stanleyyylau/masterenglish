@@ -3,10 +3,10 @@ const Vocabs = require('./../models/Vocabs');
 module.exports.getAll = function(req, res){
   Vocabs.find({})
   .then((all) => {
-    res.send(all)
+    res.json(all)
   })
   .catch((err) => {
-    res.send(err)
+    res.json(err)
   })
 }
 
@@ -20,9 +20,11 @@ module.exports.addNew = function(req, res){
 
   newVocab.save()
   .then((newVocab) => {
-    res.send("done...")
+    res.json({
+      errorCode: 0
+    })
   })
   .catch((err) => {
-    res.send(err)
+    res.json(err)
   })
 }
